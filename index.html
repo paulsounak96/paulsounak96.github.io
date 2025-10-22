@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sounak Paul | Research Statistician Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        .flip-card {
+            perspective: 1000px;
+            min-height: 500px;
+            height: 100%;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            padding: 1.5rem;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            overflow-y: auto;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -28px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #3b82f6;
+            z-index: 2;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: -20px;
+            top: 24px;
+            bottom: -20px;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #93c5fd);
+            z-index: 1;
+        }
+
+        .skill-pill {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const flipButtons = document.querySelectorAll('.flip-card button');
+            flipButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const card = this.closest('.flip-card');
+                    card.querySelector('.flip-card-inner').style.transform = 'rotateY(180deg)';
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <!-- Header Section -->
+        <header class="text-center mb-10 relative">
+            <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-r from-blue-500 to-indigo-600 opacity-10 -z-10">
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="https://avatars.githubusercontent.com/u/187357658?v=4" alt="Sounak Paul"
+                    class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mb-4">
+                <h1
+                    class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 mb-3">
+                    Sounak Paul</h1>
+                <p class="text-lg text-gray-600 mb-5 max-w-2xl mx-auto leading-relaxed">Research Statistician Developer
+                    | PhD in Statistics | AI/ML Specialist</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6 mt-6">
+                <a href="mailto:paulsounak96@gmail.com"
+                    class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200">
+                    <i data-feather="mail" class="mr-2"></i> paulsounak96@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/paulsounak96/" target="_blank"
+                    class="flex items-center text-gray-700 hover:text-blue-600">
+                    <i data-feather="linkedin" class="mr-2"></i> paulsounak96
+                </a>
+                <a href="https://github.com/paulsounak96" target="_blank"
+                    class="flex items-center text-gray-700 hover:text-blue-600">
+                    <i data-feather="github" class="mr-2"></i> paulsounak96
+                </a>
+            </div>
+        </header>
+        <!-- Intro Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block"></h2>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="flip-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div
+                            class="flip-card-front bg-gradient-to-br from-orange-100 to-black-100 p-6 flex flex-col items-center justify-center">
+                            <img src="http://static.photos/workspace/640x360/163" alt="Intro"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-center">About Me</h3>
+                            <button
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Flip
+                                to View</button>
+                        </div>
+                        <div class="flip-card-back p-6 bg-white pl-10">
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <h3 class="font-semibold text-gray-700 mb-6">Brief Introduction:</h3>
+                                <p class="mb-6">I am an applied scientist and developer focused on building intelligent, scalable systems that combine
+                                    deep learning, forecasting, and statistical modeling. My current work centers on turning advanced AI
+                                    methods into practical, high-performance software solutions.</p>
+                                <p class="mb-6">I have contributed to patents and patent-pending innovations in AI-driven code triage and automated
+                                    forecasting, integrating RAG architectures, agent frameworks, and MLOps for large-scale analytical systems.
+                                    I work extensively with Python, R, and SAS, leveraging tools like PyTorch, Docker, and Kubernetes to
+                                    deliver robust, production-ready models.</p>
+                                <p class="mb-6">My broader interests include generative AI, computer vision, and applied
+                                    statistics, with a research background in deep learning–based Cryo-EM reconstruction - an area that I
+                                    worked on during my PhD at UChicago. I’m passionate about bridging the gap between theory and engineering,
+                                    developing solutions that are both scientifically sound and operationally impactful.</p>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <!-- Education Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block"></h2>
+            <div class="grid grid-cols-1 gap-6 h-full">
+                <div class="flip-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div
+                            class="flip-card-front bg-gradient-to-br from-blue-100 to-violet-100 p-6 flex flex-col items-center justify-center">
+                            <img src="http://static.photos/education/640x360/1" alt="Education"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-center">Academic Journey</h3>
+                            <button
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Flip
+                                to View</button>
+                        </div>
+                        <div class="flip-card-back p-6 bg-white pl-10">
+
+                            <!-- University of Chicago -->
+                            <div class="relative mb-8">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-line"></div>
+                                <div class="flex flex-col md:flex-row md:justify-between">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">University of Chicago</h3>
+                                        <p class="text-gray-600">PhD in Statistics</p>
+                                    </div>
+                                    <div class="text-gray-500 md:text-right mt-2 md:mt-0">
+                                        <p>Oct 2019 – Aug 2024</p>
+                                        <p>GPA: 3.92/4.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- University of Alberta -->
+                            <div class="relative mb-8">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-line"></div>
+                                <div class="flex flex-col md:flex-row md:justify-between">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">University of Alberta</h3>
+                                        <p class="text-gray-600">MSc in Mathematics</p>
+                                    </div>
+                                    <div class="text-gray-500 md:text-right mt-2 md:mt-0">
+                                        <p>Sep 2017 – Aug 2019</p>
+                                        <p>GPA: 4.00/4.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Indian Statistical Institute -->
+                            <div class="relative">
+                                <div class="timeline-dot"></div>
+                                <div class="flex flex-col md:flex-row md:justify-between">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Indian Statistical Institute</h3>
+                                        <p class="text-gray-600">Bachelor of Mathematics (B.Math)</p>
+                                    </div>
+                                    <div class="text-gray-500 md:text-right mt-2 md:mt-0">
+                                        <p>Aug 2014 – May 2017</p>
+                                    </div>
+                                </div>
+                                <ul class="list-disc list-inside mt-2 ml-4 text-gray-700">
+                                    <li>First Division with Distinction (Class Rank: 2)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block"></h2>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="flip-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div
+                            class="flip-card-front bg-gradient-to-br from-yellow-100 to-green-100 p-6 flex flex-col items-center justify-center">
+                            <img src="http://static.photos/technology/640x360/2" alt="Technical Skills"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-center">Technical Expertise</h3>
+                            <button
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Flip
+                                to View</button>
+                        </div>
+                        <div class="flip-card-back p-6 bg-white pl-10">
+                            <div>
+                                <h3 class="font-semibold text-gray-700">Research areas:</h3>
+                                <div class="flex flex-wrap gap-2 mt-2 mb-6">
+                                    <span
+                                        class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Deep
+                                        learning</span>
+                                    <span
+                                        class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Computer
+                                        vision</span>
+                                    <span
+                                        class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Generative
+                                        AI</span>
+                                    <span
+                                        class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Applied
+                                        statistics</span>
+                                    <span
+                                        class="skill-pill bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Time
+                                        series forecasting</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold text-gray-700">Languages:</h3>
+                                <div class="flex flex-wrap gap-2 mt-2 mb-6">
+                                    <span
+                                        class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                    <span
+                                        class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">R</span>
+                                    <span
+                                        class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">C/C++</span>
+                                    <span
+                                        class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                                    <span
+                                        class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SAS</span>
+                                    <span
+                                        class="skill-pill bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Bash</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold text-gray-700">Libraries:</h3>
+                                <div class="flex flex-wrap gap-2 mt-2 mb-6">
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Tensorflow</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">numpy</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">scipy</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">pandas</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">scikit-learn</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">OpenCV</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">PyTorch3D</span>
+                                    <span
+                                        class="skill-pill bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MLflow</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold text-gray-700">Tools and frameworks:</h3>
+                                <div class="flex flex-wrap gap-2 mt-2 mb-6">
+                                    <span
+                                        class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Git</span>
+                                    <span
+                                        class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                                    <span
+                                        class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Kubernetes</span>
+                                    <span
+                                        class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">JIRA</span>
+                                    <span
+                                        class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">AWS</span>
+                                    <span
+                                        class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">LangGraph</span>
+                                    <span
+                                        class="skill-pill bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">OpenAI
+                                        Agent SDK</span>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+        <!-- Experience Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block"></h2>
+            <div class="grid grid-cols-1 gap-6 h-full">
+                <div class="flip-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div
+                            class="flip-card-front bg-gradient-to-br from-purple-100 to-indigo-100 p-6 flex flex-col items-center justify-center">
+                            <img src="http://static.photos/office/640x360/3" alt="Professional Experience"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-center">Professional Journey</h3>
+                            <button
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Flip
+                                to View</button>
+                        </div>
+                        <div class="flip-card-back p-6 bg-white pl-10">
+
+                            <!-- SAS Institute -->
+                            <div class="relative mb-8">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-line"></div>
+                                <div class="flex flex-col md:flex-row md:justify-between">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Research Statistician Developer</h3>
+                                        <p class="text-gray-600">SAS Institute Inc.</p>
+                                    </div>
+                                    <div class="text-gray-500 md:text-right mt-2 md:mt-0">
+                                        <p>Aug 2024 – Present</p>
+                                        <p>Cary, NC</p>
+                                    </div>
+                                </div>
+                                <ul class="list-disc list-inside mt-4 ml-4 space-y-2 text-gray-700">
+                                    <li>Contributed to patent-pending innovations in AI-driven code triage system, leveraging
+                                        agents, RAGs, and MCP to integrate static and dynamic analysis tools for automated
+                                        identification of performance bottlenecks, security vulnerabilities, and code inefficiencies.</li>
+                                    <li>Streamlined multistep code triage processes, reducing manual effort, accelerating diagnostics,
+                                        and improving code quality, and achieved significant performance improvements (up to 93%
+                                        reduction in run time) in computational tasks through targeted optimizations.</li>
+                                    <li>Collaborated with customers, consultants, technical support, and testers to develop analytical
+                                        components of forecasting and scientific computing, gather and analyze business requirements,
+                                        gain expertise in the usage of ML methods like regression, clustering, decision/regression trees,
+                                        neural nets, CNNs, LSTMs and transformers in a data science setting.</li>
+                                    <li>Developed TASK options for multiple forecasting nodes using Python, C, and SAS, leveraging
+                                        industry-standard technologies such as GitHub CI/CD, containers, Kubernetes, cloud platforms,
+                                        and MLOps practices for model tracking, deployment, and lifecycle management.</li>
+                                </ul>
+                            </div>
+
+                            <!-- SAS Internship -->
+                            <div class="relative">
+                                <div class="timeline-dot"></div>
+                                <div class="flex flex-col md:flex-row md:justify-between">
+                                    <div>
+                                        <h3 class="text-xl font-semibold">Forecasting R&D Intern</h3>
+                                        <p class="text-gray-600">SAS Institute Inc.</p>
+                                    </div>
+                                    <div class="text-gray-500 md:text-right mt-2 md:mt-0">
+                                        <p>Jun – Aug 2022 and 2023</p>
+                                        <p>Remote</p>
+                                    </div>
+                                </div>
+                                <ul class="list-disc list-inside mt-4 ml-4 space-y-2 text-gray-700">
+                                    <li>Developed a novel multi-objective blackbox optimization method using genetic
+                                        algorithms to autotune seasonal and subset model parameters of general ARIMA
+                                        models, simultaneously with Box-Cox parameter.</li>
+                                    <li>Achieved significant improvement in out-of-sample fit statistic (40% for RMSE)
+                                        over popular methods such as auto-arima and SAS Diagnose, averaged over a huge
+                                        collection of data sets.</li>
+                                    <li>Resulted in a patent (US12380369B1) and a paper (under review).</li>
+                                </ul>
+                            </div>
+                        </div>
+        </section>
+        <!-- Projects Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block"></h2>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="flip-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div
+                            class="flip-card-front bg-gradient-to-br from-yellow-100 to-orange-100 p-6 flex flex-col items-center justify-center">
+                            <img src="http://static.photos/science/640x360/4" alt="Projects"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-center">Research Projects</h3>
+                            <button
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Flip
+                                to View</button>
+                        </div>
+                        <div class="flip-card-back p-6 bg-white pl-10">
+
+                            <!-- Project 1 -->
+                            <div
+                                class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-semibold mb-2">Second order methods for stochastic ERM and EM
+                                    algorithms in orbit recovery setting</h3>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li>Used second order methods (newton and quasi-newton) to accelerate stochastic
+                                        variance reduced gradient descent and EM algorithms for orbit recovery problems.
+                                    </li>
+                                    <li>Achieved ≈ 75% reduction in run time using variance-reduced methods on simulated
+                                        signals.</li>
+                                    <li class="text-sm text-gray-500 mt-2">Tools Used: numpy, scipy, PyTorch, MLflow,
+                                        matplotlib</li>
+                                </ul>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <h3 class="text-xl font-semibold mb-2">Deep learning priors for orbit recovery problems
+                                </h3>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li>Developed neural network architectures for supervised learning of signals and
+                                        rotational distributions.</li>
+                                    <li>Demonstrated the advantage of using our method to accelerate the convergence for
+                                        the reconstruction of signals from the moments (up to 83%).</li>
+                                    <li class="text-sm text-gray-500 mt-2">Tools Used: numpy, scipy, PyTorch, OpenCV
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Project 3 -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <h3 class="text-xl font-semibold mb-2">Estimation of the amount of heavy-tailedness and
+                                    long-range dependence in linear processes</h3>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li>Used Marcinkiewicz strong laws of large numbers (MSLLN) to find rates of
+                                        convergence for heavy-tailed multivariate products of long-range dependent
+                                        two-sided linear processes.</li>
+                                    <li>Developed a novel method to estimate how much (if any) LRD and HT a sequential
+                                        data set possesses, and tested it on real financial data using R.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Project 4 -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <h3 class="text-xl font-semibold mb-2">Smaller projects</h3>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li>Instance-Level Object Detection using SIFT descriptors. (Computer
+                                        vision)</li>
+                                    <li>Does BCG vaccine have a protective effect against severe COVID-19? (Applied
+                                        statistics)</li>
+                                    <li>Reimplementation of various machine learning and deep learning papers (ML and
+                                        DL)</li>
+                                </ul>
+                            </div>
+                        </div>
+        </section>
+        <!-- Publications Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block"></h2>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="flip-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div
+                            class="flip-card-front bg-gradient-to-br from-red-100 to-pink-100 p-6 flex flex-col items-center justify-center">
+                            <img src="http://static.photos/legal/640x360/5" alt="Publications"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-center">Publications and Patents</h3>
+                            <button
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Flip
+                                to View</button>
+                        </div>
+                        <div class="flip-card-back p-6 bg-white pl-10">
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-700">
+                                    <span class="font-semibold">M. A. Kouritzin and S. Paul</span> On almost sure limit
+                                    theorems for heavy-tailed products of long-range dependent linear processes. <span
+                                        class="italic">Stochastic Process. Appl.</span>, <span
+                                        class="font-semibold">152</span> (2022), pp. 208-232
+                                    <a href="https://arxiv.org/abs/2007.06083" target="_blank"
+                                        class="text-blue-600 hover:underline ml-2">arXiv</a>
+                                </p>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-700">
+                                    <span class="font-semibold">Y. Khoo, S. Paul and N. Sharon</span> Deep
+                                    Neural-network Prior for Orbit Recovery from Method of Moments. <span
+                                        class="italic">J. Comput. Appl. Math.</span>, <span
+                                        class="font-semibold">444</span> (2024), 115782
+                                    <a href="https://arxiv.org/abs/2304.14604" target="_blank"
+                                        class="text-blue-600 hover:underline ml-2">arXiv</a>
+                                </p>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-700">
+                                    <span class="font-semibold">S. Paul, I.V. Farahani, M.V. Joshi and Y. Park</span> On
+                                    the Use of Derivative-Free Optimization for Autotuning ARIMA Models. <span
+                                        class="italic">Int. J. Forecast.</span> Under review.
+                                </p>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-700">
+                                    <span class="font-semibold">M.V. Joshi, S. Paul, I.V. Farahani and Y. Park</span>
+                                    Hyperparameter tuning in autoregressive integrated moving average (ARIMA) models.
+                                    <span class="font-semibold">US Patent 12,380,369</span>. 5 Aug 2025
+                                </p>
+                            </div>
+                        </div>
+        </section>
+        <!-- Awards Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold border-b-2 border-blue-500 pb-2 mb-6 inline-block"></h2>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="flip-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div
+                            class="flip-card-front bg-gradient-to-br from-blue-100 to-pink-100 p-6 flex flex-col items-center justify-center">
+                            <img src="http://static.photos/finance/640x360/6" alt="Awards"
+                                class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold text-center">Honors & Awards</h3>
+                            <button
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Flip
+                                to View</button>
+                        </div>
+                        <div class="flip-card-back p-6 bg-white pl-10">
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <h3 class="text-xl font-semibold mb-2">Academic Honors</h3>
+                                <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
+                                    <li>Dr. Josephine M. Mitchell Scholarship, <span class="italic">University of
+                                            Alberta</span> (2018)</li>
+                                    <li>Pundit RD Sharma Memorial Graduate Award, <span class="italic">University of
+                                            Alberta</span> (2017)</li>
+                                    <li>University of Alberta Master's Scholarship, <span class="italic">University of
+                                            Alberta</span> (2017)</li>
+                                    <li>Visiting Student Research Program Fellowship, <span class="italic">TIFR Bombay &
+                                            TIFR CAM</span> (2016)</li>
+                                    <li>KVPY Scholarship, <span class="italic">IISc Bangalore and Dept. of Science and
+                                            Technology, India</span> (2013)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+    </div>
+    <footer class="bg-gradient-to-r from-blue-50 to-indigo-50 py-8 mt-16 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-600">
+            <p>© 2024 Sounak Paul. Last updated in August 2025.</p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
